@@ -1,0 +1,5 @@
+Software Engineering Intern — AI Applications
+Build Python applications for semantic search and document processing.
+Required skills: Python, machine learning fundamentals, Git, and unit testing.
+Work with embeddings, REST APIs, and clear technical documentation.
+Nice to have: Streamlit, FAISS, Docker, and cloud deployment.

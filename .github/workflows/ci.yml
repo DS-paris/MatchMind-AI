@@ -1,0 +1,31 @@
+name: Validate deployment
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      MATCHMIND_PUBLIC: "true"
+      OPENAI_API_KEY: ""
+      OMP_NUM_THREADS: "2"
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m pip check
+      - run: python -m pytest -q
+      - run: python scripts/profile_deployment.py
+      - run: python scripts/smoke_server.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux-memory-profile
+          path: .cache/deployment-profile.json
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t matchmind-ci .
+      - run: docker run --rm --memory=4g matchmind-ci python scripts/profile_deployment.py
