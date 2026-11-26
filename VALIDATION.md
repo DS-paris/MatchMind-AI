@@ -23,6 +23,14 @@
 
 # MatchMind validation record
 
+## GitHub publication and Linux verification — 26 November 2026
+
+User-approved publication completed at `https://github.com/DS-paris/MatchMind-AI`, public repository, branch `main`, initial source commit `d370091f842414664f324e957c76469a1bff84a0`. All 65 release entries were checked against their manifest hashes and credential/private-file exclusions before a clean repository was created. Only the three known synthetic PDFs and processed public O*NET reference data were included; no raw/private dataset, model cache, environment, real secret file or virtual environment was pushed. The clean local Git checkout is `.cache/publish/MatchMind-AI`; it tracks `origin/main` and supports subsequent reviewed commits/pushes. The surrounding original workspace is not itself a Git repository.
+
+GitHub Actions run `https://github.com/DS-paris/MatchMind-AI/actions/runs/45769088826` completed successfully. Linux/Python 3.12 dependency installation and consistency passed, **56 tests passed in 10.46 seconds**, real MiniLM/FAISS retrieval passed and the Streamlit HTTP health check passed. Linux fixture profile: three resumes/vectors, 384 dimensions, 914.2 MiB peak RSS and 10.51 seconds including imports/loading. Docker image build and real-model profiling under a 4 GB container limit passed; that fixture process measured 700.1 MiB peak RSS and 8.2 seconds. All measured profiles returned cosines 0.6326 / 0.3524 / 0.1047 for the recorded sample query. These are three synthetic fixtures, not production-concurrency or free-host capacity guarantees.
+
+Public Streamlit deployment remains pending its separate GitHub authorization. The signed-in Streamlit account redirected Create app to GitHub login/OAuth. No live website, hosted upload, hosted index/search or provider generation is claimed as verified yet.
+
 ## Public-deployment preparation — 25 November 2026
 
 Architecture remains one Streamlit/Python process with the existing six screens and local MiniLM/FAISS pipeline. No app, repository, image or secret was published. Git and Docker were not on PATH; repository-history inspection and a local Docker build could not be performed. A pre-change source/config backup is `.cache/backups/before_deployment_prep.zip`.

@@ -1,6 +1,6 @@
 # Deploy MatchMind AI
 
-Prepared 25 November 2026. Nothing has been published, no repository has been created, and no public URL is claimed. Publication needs your approval and your hosting account. Follow the steps below when ready.
+Prepared 25 November 2026; publication approved and source published 26 November 2026 at [DS-paris/MatchMind-AI](https://github.com/DS-paris/MatchMind-AI). The initial Linux validation workflow passed. Streamlit account sign-in is complete, but its separate GitHub authorization is still required before deployment. No live application URL is claimed. The publication steps below remain useful for setup and future updates; the repository creation/push steps have already been completed.
 
 ## Platform decision
 

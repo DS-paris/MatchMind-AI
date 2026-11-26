@@ -2,6 +2,8 @@
 
 An evidence-based recruitment research application with semantic resume search and a real, tool-using OpenAI agent. Built as a portfolio MVP: results are grounded in document text, cosine scores measure retrieval similarity, and people retain all hiring decisions.
 
+**Source:** [DS-paris/MatchMind-AI](https://github.com/DS-paris/MatchMind-AI). [Linux validation](https://github.com/DS-paris/MatchMind-AI/actions/runs/45769088826) passed on 26 November 2026: 56 tests, real-model retrieval, HTTP health and a Docker build/profile. Public Streamlit deployment is awaiting the owner's separate GitHub-to-Streamlit authorization; no live application URL is claimed yet.
+
 **Deployment:** [Deployment guide](DEPLOYMENT.md) contains exact GitHub, Streamlit Community Cloud, secrets, Docker and post-deployment verification steps. No public URL has been published. Search works without an API key or external resume dataset; invited AI access requires a server-side key, a private access code and consent.
 
 ## Features
